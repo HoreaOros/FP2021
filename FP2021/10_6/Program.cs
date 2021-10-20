@@ -20,7 +20,7 @@ namespace _10_6
             int n = 0;
             // Ce este o variabila???
             // n este o variabila (nume pentru o locatie de memorie)
-            // int este un tip de date (defineste valorile pe care le poate lua o vairiabila de acel tip si operatiile pe care le putem efectua cu variabila respectiva)
+            // int este un tip de date (defineste valorile pe care le poate lua o variabila de acel tip si operatiile pe care le putem efectua cu variabila respectiva)
 
             Console.WriteLine($"Cea mai mare valoare care se poate stoca pe int este {int.MaxValue}");
             Console.WriteLine($"Cea mai mica valoare care se poate stoca pe int este {int.MinValue}");
