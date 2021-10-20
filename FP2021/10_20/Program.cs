@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Cin.Cin;
 
 namespace _10_20
 {
@@ -35,9 +36,9 @@ namespace _10_20
         {
             int a, b, c;
             Console.WriteLine("Introduceti 3 numere naturale pozitive. Cate unul pe o singura linie. ");
-            a = Cin.Cin.NextInt();
-            b = Cin.Cin.NextInt();
-            c = Cin.Cin.NextInt();
+            a = NextInt();
+            b = NextInt();
+            c = NextInt();
 
 
 
