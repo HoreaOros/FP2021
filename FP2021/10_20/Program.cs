@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Cin.Cin;
 
 namespace _10_20
 {
@@ -91,9 +92,9 @@ namespace _10_20
         {
             int a, b, c;
             Console.WriteLine("Introduceti 3 numere naturale pozitive. Cate unul pe o singura linie. ");
-            a = int.Parse(Console.ReadLine());
-            b = int.Parse(Console.ReadLine());
-            c = int.Parse(Console.ReadLine());
+            a = NextInt();
+            b = NextInt();
+            c = NextInt();
 
 
 
@@ -105,7 +106,7 @@ namespace _10_20
                 {
                     if (b + c > a)
                     {
-                        Console.WriteLine($"{a}, {b}, {c}  pot fi lungimile laturilor unui triunghi");
+                        Console.WriteLine($"{a}, {b}, {c} pot fi lungimile laturilor unui triunghi");
                     }
                     else
                     {
@@ -139,18 +140,18 @@ namespace _10_20
             }
             if (ok)
             {
-                Console.WriteLine($"{a}, {b}, {c}  pot fi lungimile laturilor unui triunghi");
+                Console.WriteLine($"{a}, {b}, {c} pot fi lungimile laturilor unui triunghi");
             }
             else
             {
-                Console.WriteLine($"{a}, {b}, {c}  nu pot fi lungimile laturilor unui triunghi");
+                Console.WriteLine($"{a}, {b}, {c} nu pot fi lungimile laturilor unui triunghi");
             }
 
 
             // Varianta 3
             if (a + b > c && a + c > b && b + c > a) 
             {
-                Console.WriteLine($"{a}, {b}, {c}  pot fi lungimile laturilor unui triunghi");
+                Console.WriteLine($"{a}, {b}, {c} pot fi lungimile laturilor unui triunghi");
             }
             else
             {
@@ -158,7 +159,10 @@ namespace _10_20
             }
 
             // Varianta 4
-            // TODO: codul sa fie scris mai compact.
+            Console.WriteLine($@"{(
+                a + b > c && a + c > b && b + c > a ? 
+                    $"{a}, {b}, {c} pot fi lungimile laturilor unui triunghi" : 
+                    $"{a}, {b}, {c} nu pot fi lungimile laturilor unui triunghi")}");
 
 
         }
@@ -171,7 +175,7 @@ namespace _10_20
         /// </example>
         private static void GaussV2()
         {
-            // S = 1+ 2   + 3+... +n
+            // S = 1+ 2 + 3+... +n
             // S = n+(n-1)+.......+1
             // 2S = (n+1)+(n+1)+..(n+1) = n(n+1);
             // S = n(n+1)/2;
