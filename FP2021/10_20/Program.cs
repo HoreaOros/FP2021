@@ -35,9 +35,9 @@ namespace _10_20
         {
             int a, b, c;
             Console.WriteLine("Introduceti 3 numere naturale pozitive. Cate unul pe o singura linie. ");
-            a = int.Parse(Console.ReadLine());
-            b = int.Parse(Console.ReadLine());
-            c = int.Parse(Console.ReadLine());
+            a = Cin.Cin.NextInt();
+            b = Cin.Cin.NextInt();
+            c = Cin.Cin.NextInt();
 
 
 
