@@ -84,7 +84,7 @@ namespace Cin
         /// Citeste urmatorul double dat ca si input in consola.
         /// </summary>
         /// <returns>valoarea double data.</returns>
-        /// <exception cref="FormatException">daca valoarea data nu este alcatuita doar din cifre 0-9 si caracterul '.'</exception>
+        /// <exception cref="FormatException">daca valoarea data nu este alcatuita doar din cifre 0-9 si caracterele . si ,</exception>
         /// <exception cref="OverflowException">daca valoarea data este mai mare de <see cref="Double.MaxValue"/></exception>
         public static double NextDouble()
         {
@@ -92,7 +92,7 @@ namespace Cin
 
             try
             {
-                value = double.Parse(NextToken());
+                value = double.Parse(NextToken().Replace(',', '.'));
             }
             catch (FormatException e)
             {
