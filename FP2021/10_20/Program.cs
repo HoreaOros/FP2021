@@ -15,13 +15,69 @@ namespace _10_20
                 // suma Gauss
                 // Gauss();
                 // GaussV2();
+                //Triunghi();
 
-                Triunghi();
+                Ordonare3();
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
+
+        }
+
+        /// <summary>
+        /// Se dau 3 numere. Trebuie afisate in ordine crescatoare.
+        /// </summary>
+        private static void Ordonare3()
+        {
+            int a, b, c;
+            Console.WriteLine("Introduceti 3 numere intregi pe o singura linie a ecranului separate printr-un spatiu");
+
+            string linie = Console.ReadLine();
+            char[] seps = {' '};
+            string[] tokens = linie.Split(seps, StringSplitOptions.RemoveEmptyEntries);
+
+            if (tokens.Length < 3)
+            {
+                Console.WriteLine("Nu s-au introdus 3 numere");
+                return;
+            }
+
+
+            a = int.Parse(tokens[0]);
+            b = int.Parse(tokens[1]);
+            c = int.Parse(tokens[2]);
+
+            int min, max, med;
+
+
+            // min = Math.Min(a, Math.Min(b, c));
+            // max = Math.Max(a, Math.Max(b, c));
+            min = a;
+            if (b < min)
+            {
+                min = b;
+            }
+            if (c < min)
+            {
+                min = c;
+            }
+
+
+            max = a;
+            if (b > max)
+            {
+                max = b;
+            }
+            if (c > max)
+            {
+                max = c;
+            }
+
+            med = a + b + c - min - max;
+
+            Console.WriteLine($"{min}, {med}, {max}");
 
         }
 
