@@ -17,9 +17,9 @@ namespace _10_20
                 // suma Gauss
                 // Gauss();
                 // GaussV2();
-                //Triunghi();
+                Triunghi();
 
-                Ordonare3();
+                //Ordonare3();
             }
             catch (Exception e)
             {
@@ -165,7 +165,12 @@ namespace _10_20
                     $"{a}, {b}, {c} pot fi lungimile laturilor unui triunghi" : 
                     $"{a}, {b}, {c} nu pot fi lungimile laturilor unui triunghi")}");
 
+            //Varianta 5
+            string message = (a + b > c && a + c > b && b + c > a ? $" {a}, {b}, {c} pot fi lungimile laturilor unui triunghi" : $"{a}, {b}, {c} nu pot fi lungimile laturilor unui triunghi");
+            Console.WriteLine(message);
 
+            //Varianta 6
+            Console.WriteLine(a + b > c && a + c > b && b + c > a ? $" {a}, {b}, {c} pot fi lungimile laturilor unui triunghi" : $"{a}, {b}, {c} nu pot fi lungimile laturilor unui triunghi");
         }
 
         /// <summary>
