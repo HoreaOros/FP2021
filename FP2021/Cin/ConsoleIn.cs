@@ -63,7 +63,7 @@ namespace Cin
 
             try
             {
-                value =  int.Parse(NextToken());
+                value = int.Parse(NextToken());
             }
             catch (FormatException e)
             {
@@ -139,6 +139,22 @@ namespace Cin
             }
 
             return value;
+        }
+        
+        /// <summary>
+        /// Citeste primele n cuvinte date in consola.
+        /// </summary>
+        /// <param name="count">numarul de cuvinte care va fi citit.</param>
+        /// <returns>string-ul format prin concatenarea tuturor cuvintelor citite.</returns>
+        public static string FirstWords(int count)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 1; i <= count; ++i)
+            {
+                sb.Append($"{NextToken()} ");
+            }
+            return sb.ToString();
         }
     }
 }
