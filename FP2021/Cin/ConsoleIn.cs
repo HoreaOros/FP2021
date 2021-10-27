@@ -59,23 +59,21 @@ namespace Cin
         /// <exception cref="OverflowException">daca valoarea data este mai mare de <see cref="int.MaxValue"/>.</exception>
         public static int NextInt()
         {
+            string token = NextToken();
             int value;
 
             try
             {
-                value = int.Parse(NextToken());
+                value = int.Parse(token);
             }
             catch (FormatException e)
             {
-                Console.WriteLine("Valoarea data nu poate fi transformata in int!");
-                value = 0;
-                //throw;
+                throw new FormatException($"Valoarea {token} nu poate fi transformata in int!", e);
             }
             catch (OverflowException e)
             {
-                Console.WriteLine($"Valoarea data este mai mare decat {int.MaxValue} sau mai mica decat {int.MinValue}!");
-                value = 0;
-                //throw;
+                throw new OverflowException(
+                    $"Valoarea {token} este mai mare decat {int.MaxValue} sau mai mica decat {int.MinValue}!", e);
             }
 
             return value;
@@ -89,23 +87,21 @@ namespace Cin
         /// <exception cref="OverflowException">daca valoarea data este mai mare de <see cref="Double.MaxValue"/></exception>
         public static double NextDouble()
         {
+            string token = NextToken();
             double value;
 
             try
             {
-                value = double.Parse(NextToken().Replace(',', '.'));
+                value = double.Parse(token.Replace(',', '.'));
             }
             catch (FormatException e)
             {
-                Console.WriteLine("Valoarea data nu poate fi transformata in double!");
-                value = 0;
-                //throw;
+                throw new FormatException($"Valoarea {token} nu poate fi transformata in double!", e);
             }
             catch (OverflowException e)
             {
-                Console.WriteLine($"Valoarea data este mai mare decat {double.MaxValue} sau mai mica decat {double.MinValue}!");
-                value = 0;
-                //throw;
+                throw new OverflowException(
+                    $"Valoarea {token} este mai mare decat {double.MaxValue} sau mai mica decat {double.MinValue}!", e);
             }
 
             return value;
@@ -119,23 +115,21 @@ namespace Cin
         /// <exception cref="OverflowException">daca valoarea data este mai mare decat <see cref="long.MaxValue"/> sau mai mica decat <see cref="long.MinValue"/>.</exception>
         public static long NextLong()
         {
+            string token = NextToken();
             long value;
 
             try
             {
-                value = long.Parse(NextToken());
+                value = long.Parse(token);
             }
             catch (FormatException e)
             {
-                Console.WriteLine("Valoarea data nu poate fi transformata in long!");
-                value = 0;
-                //throw;
+                throw new FormatException($"Valoarea {token} nu poate fi transformata in long!", e);
             }
             catch (OverflowException e)
             {
-                Console.WriteLine($"Valoarea data este mai mare decat {long.MaxValue} sau mai mica decat {long.MinValue}!");
-                value = 0;
-                //throw;
+                throw new OverflowException(
+                    $"Valoarea {token} este mai mare decat {long.MaxValue} sau mai mica decat {long.MinValue}!", e);
             }
 
             return value;
