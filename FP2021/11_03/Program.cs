@@ -21,7 +21,39 @@ namespace _11_03
 
             // Coins();
 
-            SumaCifre();
+            //SumaCifre();
+           
+            Bradut();
+
+
+        }
+
+        private static void Bradut()
+        {
+            int n;
+            n = 20;
+
+
+            for (int i = n; i >= 1; i--)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(" ");
+                }
+
+
+                for (int j = 0; j <= 2 * (n - i); j++)
+                {
+                    Console.Write("*");
+                }
+
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(" ");
+                }
+
+                Console.WriteLine();
+            }
 
         }
 
