@@ -14,8 +14,8 @@ namespace _11_03
             // Stars2();
             // Stars3();
 
-            // Stars4();
-            // Stars5();
+            Stars4();
+            Stars5();
 
             // Palindrom();
 
@@ -152,7 +152,47 @@ namespace _11_03
         /// </summary>
         private static void Stars5()
         {
-            throw new NotImplementedException();
+            int n;
+            Console.Write("n = ");
+            n = int.Parse(Console.ReadLine());
+
+            for (int i = n; i >= 1; i--)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("*");
+                }
+                for (int j = 1; j <= 2 * (n - i); j++)
+                {
+                    Console.Write(" ");
+                }
+
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("*");
+                }
+
+                Console.WriteLine();
+            }
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 1; j <= 2 * n; j++)
+                {
+                    if (j <= i)
+                    {
+                        Console.Write("*");
+                    }
+                    else if (j >= 2 * n - i + 1)
+                    {
+                        Console.Write("*");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+                Console.WriteLine();
+            }
         }
 
         // TODO
@@ -165,7 +205,28 @@ namespace _11_03
         /// <summary>
         private static void Stars4()
         {
-            throw new NotImplementedException();
+            int n;
+            Console.Write("n = ");
+            n = int.Parse(Console.ReadLine());
+            for(int i = 1; i<= n; i++)
+            {
+                for(int j = 1; j <= 2*n; j++)
+                {
+                    if(j<=i)
+                    {
+                        Console.Write("*");
+                    }
+                    else if(j>=2*n-i+1)
+                    {
+                        Console.Write("*");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+                Console.WriteLine();
+            }
         }
 
         /// <summary>
