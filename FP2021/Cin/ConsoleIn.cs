@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Cin
 {
-    public static class ConsoleIn
+    public static class Cin
     {
         /// <summary>
         /// Citeste un grup de caractere din consola.
