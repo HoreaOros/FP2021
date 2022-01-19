@@ -208,15 +208,15 @@ namespace _11_03
             int n;
             Console.Write("n = ");
             n = int.Parse(Console.ReadLine());
-            for(int i = 1; i<= n; i++)
+            for(int i = 1; i<= n; i++) 
             {
-                for(int j = 1; j <= 2*n; j++)
+                for(int j = 1; j <= 2 * n; j++)
                 {
-                    if(j<=i)
+                    if(j <= i)
                     {
                         Console.Write("*");
                     }
-                    else if(j>=2*n-i+1)
+                    else if(j >= 2 * n - i + 1)
                     {
                         Console.Write("*");
                     }

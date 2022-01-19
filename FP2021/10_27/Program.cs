@@ -158,7 +158,8 @@ namespace _10_27
         }
 
         /// <summary>
-        /// Se citeste un numar de la consola si se cere sa se determine complementul fata de 9 al numarului.
+        /// Se citeste un numar de la consola si se cere sa se determine 
+        /// complementul fata de 9 al numarului.
         /// </summary>
         /// <example>
         /// Daca n = 1258 ==> 8741
